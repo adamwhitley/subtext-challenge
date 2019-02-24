@@ -1,33 +1,157 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Century Gothic", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(white, ghostwhite);
 }
 
+/* Header */
+h1 {
+  color: black;
+  font-size: 1.5rem;
+  width: calc(100% - 115px);
+  float: left;
+}
+
+h1 span {color: orangered;}
+h1 img {vertical-align: bottom;}
+
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  height: 3vw;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #ccc;
+  padding: .15rem 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+.sort {
+  float: right;
+  width: 100px;
+  margin: 1.5rem 15px 0 0;
+}
+
+/* Main Content Area */
+.mainContent {
+  padding-top: 66px;
+}
+
+/* Beer List */
+.beer {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  margin: 1rem 0;
+}
+
+.beer .imgCrop {
+  float: left;
+  width: 35vw;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.beer .imgCrop img {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.beer .beerInfo {
+  width: 64vw;
+  height: 40vh;
+  float: right;
+  position: relative;
+}
+
+.beer .ibu {
+  position: absolute;
+  background: green;
   color: white;
+  top: 0;
+  right: 50px;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.beer .abv {
+  position: absolute;
+  background: orange;
+  color: white;
+  top: 0;
+  right: 0;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.beer .abv span,
+.beer .ibu span {
+  font-size: 1rem;
+  font-weight: normal;
+  display: block;
+}
+
+.beer .description span.beerStyle {
+  font-size: 1.5rem;
+  display: block;
+  color: lightgray;
+  font-style: italic;
+}
+
+.beer .rating,
+.beer .production,
+.beer .homebrew {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.beer .homebrew {
+  right: 0;
+  width: 25%;
+  background: orange;
+}
+.beer .production {
+  right: 25%;
+  width: 30%;
+  background: darkorange;
+}
+.beer .rating {
+  right: 53%;
+  width: 43.5%;
+  background: orangered;
+}
+
+.beer .production span,
+.beer .homebrew span {
+  padding-right: 10px;
+}
+
+.beer .production path,
+.beer .homebrew path {
+  fill: white;
+}
+
+.beer .rating path {
+  fill: yellow;
+  border: 1px solid black;
+}
+
+/* Brewery Info */
+.Brewery {
+  background: #ccc;
+  clear: both;
+  padding: 10px;
+  display: none;
+}
+
+.Brewery img {
+  max-width: 20vw;
 }
