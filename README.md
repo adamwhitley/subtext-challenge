@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and built over the course of 3 hours on 2/24/2019.
+
+The items in the given REST endpoint were fetched and displayed on the main component with basic sorting functionality. There are child components that were in reality unnecessary, but I wanted to demonstrate nested components with their own API calls.
+
+The only things I didn't get to are hooking up the brewery contact links and using Google's map API to display their location using the lat and long the API provides.
 
 ## Available Scripts
 
